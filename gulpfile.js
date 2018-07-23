@@ -6,6 +6,8 @@ const runSequence = require('run-sequence');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
+const postcss = require('gulp-postcss');
+const pxtounits = require('postcss-px2units');
 
 const $ = gulpLoadPlugins();
 // const reload = browserSync.reload;
@@ -25,7 +27,7 @@ gulp.task('copy', () =>
   }))
 );
 
-// sass 编译 生成小程序wxss
+// sass 编译 生成小程序 wxss
 gulp.task('sass', function () {
   gulp.src([
     'client/**/*.scss'
@@ -33,6 +35,7 @@ gulp.task('sass', function () {
   .pipe(sass({
     outputStyle: 'compressed'
   }).on('error', sass.logError))
+  .pipe(postcss([pxtounits()]))
   .pipe(rename(function (path) {
     // path.basename = 'xxx';
     path.extname = ".wxss";
