@@ -7,7 +7,12 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="button-group">
+    <button type="primary" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="goSkeleton" hover-class="other-button-hover"> 骨架屏 </button>
   </view>
+  
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
 </view>

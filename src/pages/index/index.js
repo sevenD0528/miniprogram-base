@@ -7,7 +7,13 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    defaultSize: 'default',
+    primarySize: 'default',
+    warnSize: 'default',
+    disabled: false,
+    plain: false,
+    loading: false
   },
   //事件处理函数
   bindViewTap: function() {
@@ -50,5 +56,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  goSkeleton: function() {
+    wx.navigateTo({
+      url: '../index_s/index_s'
+    })
+  },
 })

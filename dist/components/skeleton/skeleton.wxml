@@ -1,0 +1,15 @@
+<view class="sk" style="width: {{ systemInfo.width }}px; height: {{ systemInfo.height }}px; background-color: {{ bgcolor }};">
+    <block wx:if="{{ loading == 'static'}}">
+        <view class="sk-static" wx:for="{{ skeletonItemLists }}" wx:key="unique">
+            <view class="sk-head"></view>
+            <view class="sk-body">
+                <div class="sk-title"></div>
+                <div class="sk-content"></div>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+        <view wx:for="{{ skeletonRectLists }}" wx:key="unique" class="sk-rect {{ loading }}" style="width: {{ item.width }}px; height: {{ item.height }}px; left: {{ item.left }}px; top: {{ item.top }}px"></view>
+        <view wx:for="{{ skeletonRadiusLists }}" wx:key="unique" class="sk-radius {{ loading }}" style="width: {{ item.width }}px; height: {{ item.height }}px;  border-radius: {{ item.width }}px; left: {{ item.left }}px; top: {{ item.top }}px"></view>
+    </block>
+</view>

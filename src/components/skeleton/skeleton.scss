@@ -1,0 +1,125 @@
+.sk {
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  z-index: 9999; 
+  overflow: hidden;
+  .sk-rect {
+    position: absolute; 
+    // background-color: rgb(194, 207, 214);
+    background-color: #eee;
+    &.flush {
+      background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+      background-size: 800px 100px;
+    }
+  }
+  .sk-radius {
+    position: absolute; 
+    // background-color: rgb(194, 207, 214);
+    background-color: #eee;
+    &.flush {
+      background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+      background-size: 800px 100px;
+    }
+  }
+
+  .sk-static {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    .sk-head,
+    .sk-title,
+    .sk-content {
+      display: flex;
+      background: rgb(194, 207, 214);
+    }
+
+    .sk-head {
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+
+    .sk-body {
+      display: flex;
+      flex-direction: column;
+      margin-left: 40px;
+      .sk-title {
+        width: 500px;
+        height: 60px;
+      }
+    
+      .sk-content {
+        width: 260px;
+        height: 30px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.blink{
+  width: 100%;
+  height: 100%;
+  background: rgb(194, 207, 214);
+  animation-duration: 2s;
+  animation-name: blink;
+  animation-iteration-count: infinite;
+}
+
+.flush {
+  width: 100%;
+  height: 100%;
+  // background-color: rgb(194, 207, 214);
+  background-color: #eee;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: flush;
+  animation-timing-function: linear;
+}
+
+@keyframes blink {
+  0% {
+    opacity: .4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .4;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: .4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .4;
+  }
+}
+
+@keyframes flush{
+  0%{
+      background-position: -750px 0
+  }
+  100%{
+      background-position: 750px 0
+  }
+}
+
+@-webkit-keyframes flush{
+  0%{
+      background-position: -750px 0
+  }
+  100%{
+      background-position: 750px 0
+  }
+}

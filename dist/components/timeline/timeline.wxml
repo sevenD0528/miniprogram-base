@@ -1,0 +1,14 @@
+
+<view class="sk2">
+    <view class="timeline-item">
+        <view class="animated-background">
+            <view class="bg-mask header-top"></view>
+            <view class="bg-mask header-left"></view>
+            <view class="bg-mask header-right"></view>
+            <view class="bg-mask header-bottom"></view>
+            <view class="bg-mask subheader-left"></view>
+            <view class="bg-mask subheader-right"></view>
+            <view class="bg-mask subheader-bottom"></view>
+        </view>
+    </view>
+</view>

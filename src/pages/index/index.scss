@@ -19,3 +19,17 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: green;
+  }
+}

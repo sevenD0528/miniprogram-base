@@ -1,0 +1,154 @@
+/**index.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  box-sizing: border-box;
+  background: #eeeeee;
+} 
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .userinfo-avatar {
+    width: 128px;
+    height: 128px;
+    margin: 20px;
+    border-radius: 50%;
+  }
+  
+  .userinfo-nickname {
+    width: 200px;
+    height: 50px;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.usermotto {
+  margin-top: 150px;
+}
+
+.lists {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  .item {
+    margin: 10px 0;
+    width: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 20px;
+    .w-userinfo {
+      display: flex;
+      width: 100%;
+      padding: 10px;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      .avatar {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        .img-circle {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      .name {
+        color: #121212;
+        font-size: 24px;
+        margin-left: 10px;
+        // justify-content: center;
+        align-items: center;
+      }
+    }
+    .w-winfo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      min-height: 160rpx;
+      line-height: 1em;
+      margin-top: 25rpx;
+      margin-bottom: 20rpx;
+      border-radius: 8rpx;
+      background-color: #f8f8f8;
+      border-top-right-radius: 9rpx;
+      border-bottom-right-radius: 9rpx;
+    }
+    
+    .w-wcover {
+      position: relative;
+      width: 160rpx;
+      height: 160rpx;
+      background-color: #ddd;
+      border-top-left-radius: 9rpx;
+      border-bottom-left-radius: 9rpx;
+    }
+    
+    .w-winfo-mv {
+      display: block;
+    }
+    
+    .w-winfo-mv .w-wcover {
+      width: 100%;
+      height: 334rpx;
+      /* margin-bottom: 10rpx; */
+      background-size: cover;
+      border-top-right-radius: 9rpx;
+      border-bottom-left-radius: 0;
+    }
+    
+    .w-winfo-detail {
+      padding-left: 20rpx;
+      padding-top: 20rpx;
+      padding-bottom: 20rpx;
+    }
+    
+    .w-wname {
+      display: inline-block;
+      max-width: 510rpx;
+      margin-bottom: 20rpx;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #121212;
+      font-size: 34rpx;
+    }
+    .w-wdetail {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      color: #aaa;
+      font-size: 24rpx;
+
+      .w-icon {
+        background: url('../../assets/images/base64/earphone.png');
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .w-num {
+        margin-left: 10px;
+        color: #121212;
+        font-size: 20px;
+      }
+    }
+  }
+
+}

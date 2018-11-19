@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<skeleton selector="skeleton" loading="static" bgcolor="#fff" wx:if="{{ showSkeleton }}"></skeleton>
+<view class="container skeleton">
+  <!-- <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar skeleton-radius" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname skeleton-rect">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto skeleton-rect">{{motto}}</text>
+  </view> -->
+  <view class="lists">
+      <view wx:for="{{ lists }}" wx:key="unique" class="item skeleton-item">
+        <view class="w-userinfo">
+          <view class="avatar">
+            <image class="img-circle" src="{{ item.headphoto }}" mode="aspectFit" binderror="" bindload=""></image></view>
+          <view class="name">{{ item.nickname }}</view>
+        </view>
+        <view class="w-winfo {{ item.isvideo ? 'w-winfo-mv' : '' }}">
+          <image class="w-wcover skeleton-rect" src='{{ item.cover_img }}' mode="aspectFill">
+            <!-- <view class="skeleton-rect {{ item.isduet? 'w-duet-mv-tag' : 'w-mv-tag' }}" s-if="item.isvideo "></view> -->
+          </image>
+          <view class="w-winfo-detail">
+            <view class="w-wname skeleton-rect">{{ item.songname }}</view>
+            <view class="w-wdetail">
+              <view class="w-icon"></view>
+              <text class="w-num skeleton-rect">{{ item.listen_num }}</text>
+            </view>
+          </view>
+        </view> 
+        <!-- <text class="skeleton-rect">{{ item }}</text> -->
+      </view>
+  </view>
+</view>
